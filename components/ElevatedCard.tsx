@@ -31,6 +31,10 @@ export default function ElevatedCard() {
                 <Text>🥰</Text>
             </View>
 
+            <View style={[styles.card, styles.cardElevated]}>
+                <Text>🦄</Text>
+            </View>
+
         </ScrollView>
     </View>
   )
