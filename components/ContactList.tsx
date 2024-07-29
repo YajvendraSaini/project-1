@@ -38,8 +38,11 @@ export default function ContactList() {
                 <Image
                 source={{ uri: imageUrl }} style={styles.userImage}
                 />
-                <Text style={styles.userName}>{name}</Text>
-                <Text style={styles.userStatus}>{status}</Text>
+                <View>
+                    <Text style={styles.userName}>{name}</Text>
+                    <Text style={styles.userStatus}>{status}</Text>
+                </View>
+                
             </View>
         ))} 
       </ScrollView>
@@ -52,13 +55,24 @@ const styles = StyleSheet.create({
 
     },
 
-    container:{},
-    userCard: {},
+    container:{
+        paddingHorizontal: 20,
+        marginBottom: 3,
+        
+    },
+    userCard: {
+        flex:1,
+        flexDirection:'row',
+        alignItems:'center',
+    },
     userImage: {
         width: 100,
         height: 100,
         borderRadius: 50,
+        marginRight: 14,
     },
     userName:{},
-    userStatus:{},
+    userStatus:{
+        fontSize: 12,
+    },
 })
